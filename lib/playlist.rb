@@ -1,8 +1,7 @@
 class Playlist
-  attr_accessor :airdate
-  attr_accessor :songs
+  attr_reader :songs, :airdate, :name
 
-  def initialize
-    @songs = []
+  def initialize(name, songs, airdate)
+    @name, @songs, @airdate = name, songs, airdate
   end
 end

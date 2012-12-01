@@ -1,10 +1,14 @@
 class Song
-  attr_accessor :artist, :song, :album, :label
+  attr_reader :artist, :song, :album, :label
 
-  def initialize(opts)
-    @artist = opts[:artist]
-    @song = opts[:song]
-    @album = opts[:album]
-    @label = opts[:label]
+  def initialize(artist, song, album, label)
+    @artist = artist
+    @song = song
+    @album = album
+    @label = label
+  end
+
+  def to_hash
+    {artist: @artist, song: @song, album: @album, label: @label}
   end
 end
