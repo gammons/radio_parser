@@ -5,6 +5,7 @@ require 'playlist_maker'
 require 'parser'
 require 'parsers/wprb_parser'
 require 'spotify/spotify_web_api'
+require 'spotify/track_finder'
 
 VCR.configure do |c|
   c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
