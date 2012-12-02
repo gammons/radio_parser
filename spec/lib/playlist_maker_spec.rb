@@ -1,5 +1,4 @@
-require 'playlist_maker'
-require 'parser'
+require 'spec_helper'
 
 class TestParser < Parser
   def get_songs
@@ -23,6 +22,6 @@ describe PlaylistMaker do
   let(:playlist) { subject.create_playlist! }
   it "makes a playlist with the songs it parsed" do
     playlist.songs.length.should eql(2)
-    p playlist
+    playlist.songs.should eql([:one, :two])
   end
 end

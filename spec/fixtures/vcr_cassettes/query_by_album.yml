@@ -1,0 +1,72 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://ws.spotify.com/search/1/album.json?q=Radio%20Activity
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 02 Dec 2012 14:39:30 GMT
+      Server:
+      - lighttpd smisk/1.1.6
+      Vary:
+      - Accept-Charset
+      Expires:
+      - Sun, 02 Dec 2012 19:11:01 GMT
+      Last-Modified:
+      - Fri, 30 Nov 2012 23:41:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '2400'
+      X-Varnish:
+      - 735474936 733047153
+      Age:
+      - '70109'
+      Via:
+      - 1.1 varnish
+      Access-Control-Allow-Origin:
+      - ! '*'
+    body:
+      encoding: US-ASCII
+      string: ! '{"info": {"num_results": 3, "limit": 100, "offset": 0, "query": "Radio
+        Activity", "type": "album", "page": 1}, "albums": [{"name": "Radio-Activity
+        (2009 Digital Remaster)", "popularity": "0.55494", "external-ids": [{"type":
+        "upc", "id": "5099996601952"}], "href": "spotify:album:4nEgdO6tkE2v5LO3mpUEe9",
+        "artists": [{"href": "spotify:artist:0dmPX6ovclgOy8WWJaFEUU", "name": "Kraftwerk"}],
+        "availability": {"territories": "AD AE AG AI AL AM AN AO AQ AR AS AU AW AZ
+        BA BB BD BE BF BG BH BI BJ BN BO BR BS BT BV BW BY BZ CA CC CD CF CG CI CK
+        CL CM CN CO CR CU CV CX CY CZ DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK
+        FM FO FR GA GB GD GE GF GH GI GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT
+        HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KH KI KM KN KP KR KW KY KZ LA LB
+        LC LI LK LR LS LT LU LV LY MA MC MD MG MH ML MN MO MP MQ MR MS MT MU MV MW
+        MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN
+        PR PT PW PY QA RE RO RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR ST
+        SV SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ
+        VC VE VG VI VN VU WF WS YE YT ZA ZM ZW ZZ"}}, {"name": "Radio-Activity", "popularity":
+        "0.10125", "external-ids": [{"type": "upc", "id": "711574473625"}], "href":
+        "spotify:album:6hmRf8e8S7t9GPH70yYnpo", "artists": [{"href": "spotify:artist:3d4K7FgjLZO8JfPjPy5fMs",
+        "name": "Frodus"}], "availability": {"territories": "AD AE AF AG AI AL AM
+        AN AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BM BN BO BR BS BT
+        BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CX CY CZ DE DJ DK
+        DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM
+        GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IN IO IQ IR IS IT JM
+        JO KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC
+        MD MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI
+        NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RU
+        RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR ST SV SY SZ TC TD TF TG TH
+        TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF
+        WS YE YT ZA ZM ZW ZZ"}}, {"name": "Radio Activity", "popularity": "0.00146",
+        "external-ids": [{"type": "upc", "id": "885767796478"}], "href": "spotify:album:0NMSVDW2QRBuF60mGCEk3v",
+        "artists": [{"href": "spotify:artist:61anyjpvYvzJC9BjzYbDqx", "name": "Neutron
+        Wednesday"}], "availability": {"territories": "worldwide"}}]}'
+    http_version: 
+  recorded_at: Sun, 02 Dec 2012 14:39:32 GMT
+recorded_with: VCR 2.3.0

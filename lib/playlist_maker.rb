@@ -1,5 +1,4 @@
-require './lib/playlist'
-
+require_relative 'playlist'
 class PlaylistMaker
   def initialize(show_name, html, parser)
     @show_name = show_name

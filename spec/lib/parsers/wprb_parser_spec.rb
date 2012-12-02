@@ -1,5 +1,4 @@
-require 'parser'
-require 'parsers/wprb_parser'
+require 'spec_helper'
 
 describe WprbParser do
   subject { WprbParser.new(File.read('spec/support/playlist.php')) }

@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
-require './lib/song'
+require_relative 'song'
 
 class Parser
   attr_reader :airdate, :songs
