@@ -5,10 +5,4 @@ describe TrackFinder do
 
   it "gets the spotify uri" do
   end
-
-
-
-
-
-  
 end

@@ -1,4 +1,4 @@
-require_relative 'spotify_web_api'
+require_relative 'searcher'
 
 class TrackFinder
   def initialize(song)
