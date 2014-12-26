@@ -1,5 +1,6 @@
 class Song
   attr_reader :artist, :song, :album, :label
+  attr_accessor :spotify_id
 
   def initialize(artist, song, album, label)
     @artist = artist
@@ -9,6 +10,6 @@ class Song
   end
 
   def to_hash
-    {artist: artist, song: song, album: album, label: label}
+    {artist: artist, song: song, album: album, label: label, spotify_id: spotify_id}
   end
 end

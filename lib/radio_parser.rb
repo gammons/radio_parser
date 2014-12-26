@@ -1,4 +1,8 @@
 require 'rubygems'
+require 'dotenv'
+require 'httparty'
+require 'fuzzy_match'
+Dotenv.load
 
 require_relative 'playlist'
 require_relative 'song'
