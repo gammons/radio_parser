@@ -13,6 +13,8 @@ task :create_playlist, [:url] do |t, args|
   Spotify::Search.new.populate_spotify_song_ids!(playlist)
   $stdout << "done\n"
 
+  $stdout << "Was able to find spotify songs for #{playlist.spotify_song_count} of #{playlist.songs.length} songs\n"
+
   $stdout << "Creating new spotify playlist... "
   Spotify::Playlist.new(playlist).create!
   $stdout << "done\n"
