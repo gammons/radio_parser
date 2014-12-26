@@ -2,7 +2,7 @@ class Song
   attr_reader :artist, :song, :album, :label
   attr_accessor :spotify_id
 
-  def initialize(artist, song, album, label)
+  def initialize(artist = nil, song = nil, album = nil, label = nil)
     @artist = artist
     @song = song
     @album = album

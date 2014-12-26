@@ -17,6 +17,10 @@ class WprbParser < Parser
     @doc.at_css('p span.text').children[0].text
   end
 
+  def get_show_name
+    @doc.at_css('h2').children[0].text + " " + @doc.at_css('h3').children[0].text
+  end
+
   private
 
   def find_table
