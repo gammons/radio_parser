@@ -16,12 +16,12 @@ describe PlaylistMaker do
   subject { PlaylistMaker.new(show_name, html, TestParser) }
 
   it "creates a playlist" do
-    subject.create_playlist!.should be_a_kind_of(Playlist)
+    expect(subject.create_playlist!).to be_a_kind_of(Playlist)
   end
 
   let(:playlist) { subject.create_playlist! }
   it "makes a playlist with the songs it parsed" do
-    playlist.songs.length.should eql(2)
-    playlist.songs.should eql([:one, :two])
+    expect(playlist.songs.length).to eql(2)
+    expect(playlist.songs).to eql([:one, :two])
   end
 end

@@ -9,6 +9,6 @@ class Song
   end
 
   def to_hash
-    {artist: @artist, song: @song, album: @album, label: @label}
+    {artist: artist, song: song, album: album, label: label}
   end
 end

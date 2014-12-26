@@ -13,7 +13,7 @@ task :create_playlist, :file do |t, args|
 end
 
 RSpec::Core::RakeTask.new(:spec) do |t|
-  t.rspec_opts = %w[--format progress --color --debug]
+  t.rspec_opts = %w[--format progress --color]
 end
 
 task :default => :spec
