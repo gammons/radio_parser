@@ -1,5 +1,4 @@
 module Spotify
-  Url = "https://api.spotify.com/v1"
   class Search
     def populate_spotify_song_ids!(playlist)
       playlist.songs.each do |song|
@@ -18,27 +17,23 @@ module Spotify
     end
 
     def get_album_id(artist_id, album_name)
-      albums = get(Url + "/artists/#{artist_id}/albums").parsed_response['items']
+      albums = Spotify.get(Url + "/artists/#{artist_id}/albums").parsed_response['items']
       real_album_name = FuzzyMatch.new(albums.map {|a| a['name'] }).find(album_name)
       album = albums.find {|a| a['name'] == real_album_name }
       album.nil? ? nil : album['id']
     end
 
     def get_artist_id(artist_name)
-      resp = get(Url + "/search", q: artist_name, type: 'artist')
+      resp = Spotify.get(Url + "/search", q: artist_name, type: 'artist')
       artist = resp.parsed_response['artists']['items'][0]
       artist.nil? ? nil : artist['id']
     end
 
     def get_song_id(album_id, song_name)
-      songs = get(Url + "/albums/#{album_id}/tracks", limit: 50).parsed_response['items']
+      songs = Spotify.get(Url + "/albums/#{album_id}/tracks", limit: 50).parsed_response['items']
       real_song_name = FuzzyMatch.new(songs.map {|a| a['name'] }).find(song_name)
       song = songs.find {|s| s['name'] == real_song_name}
       song.nil? ? nil : song['id']
-    end
-
-    def get(url, params = nil)
-      HTTParty.get(url, query: params, header: "Authorization: Bearer #{ENV['SPOTIFY_API_TOKEN']}")
     end
   end
 end

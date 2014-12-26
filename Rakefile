@@ -1,8 +1,5 @@
 require 'rubygems'
-require './lib/parser'
-require './lib/parsers/wprb_parser'
-require './lib/playlist'
-require './lib/playlist_maker'
+require_relative 'lib/radio_parser'
 
 require "rspec/core/rake_task"
 
