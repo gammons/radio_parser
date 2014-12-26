@@ -1,0 +1,5 @@
+Run the following:
+
+rake create_playlist[http://wprb.com/tpm/world/printplaylist.php?show_id=33839]
+
+
