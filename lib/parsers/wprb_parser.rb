@@ -18,7 +18,7 @@ class WprbParser < Parser
   end
 
   def get_show_name
-    @doc.at_css('h2').children[0].text + " " + @doc.at_css('h3').children[0].text
+    @doc.at_css('h2').children[0].text + @doc.search("h3").last.text
   end
 
   private

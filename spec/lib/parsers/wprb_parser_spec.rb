@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe WprbParser do
-  subject { WprbParser.new(File.read('spec/support/playlist.php')) }
+  subject { WprbParser.new(File.read('spec/support/playlist3.php')) }
   let(:first_song) { Song.new("Jack Dixon", "E", "E/Find Shelter", "Hotflush") }
   let(:song_count) { 22 }
 
@@ -11,6 +11,6 @@ describe WprbParser do
   end
 
   it 'gets the show name' do
-    puts subject.get_show_airdate
+    puts subject.get_show_name
   end
 end
